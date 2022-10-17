@@ -57,14 +57,14 @@
               <p class="fw-bold">/api/v1/nakamas/name=NameNakama</p>
               <p>Click in the example for copy</p>
               <p class="nakamas-codeblock rounded" id="nakama_link_copy">
-                https://nakamas-one-piece.herokuapp.com/api/v1/nakamas/name="nami"
+                https://nakamas-one-piece.herokuapp.com/api/v1/nakamas/name=nami
               </p>
               <div id="nakama_link_status"></div>
               <a href="#" target="_blank">Check this Example</a>
             </div>
             <div class="mb-2">
               <p class="nakamas-codeblock rounded" id="nakama_link_copy">
-                https://nakamas-one-piece.herokuapp.com/api/v1/nakamas/name="monkey_d._luffy"
+                https://nakamas-one-piece.herokuapp.com/api/v1/nakamas/name=monkey_d._luffy
               </p>
               <div id="nakama_link_status"></div>
               <a href="#" target="_blank">Check this Example</a>
@@ -107,7 +107,7 @@
             </div>
             <div class="mb-2">
               <p class="nakamas-codeblock rounded" id="nakama_link_copy">
-                https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name="piratas_de_sombrero_de_paja"
+                https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name=piratas_de_sombrero_de_paja
               </p>
               <div id="nakama_link_status"></div>
               <a href="#" target="_blank">Check this Example</a>
@@ -135,7 +135,7 @@
             </div>
             <div class="mb-2">
               <p class="nakamas-codeblock rounded" id="nakama_link_copy">
-                https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name="piratas_de_sombrero_de_paja"&nakamaName="nami"
+                https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name=piratas_de_sombrero_de_paja&nakamaName=nami
               </p>
               <div id="nakama_link_status"></div>
               <a href="#" target="_blank">Check this Example</a>
@@ -144,28 +144,6 @@
         </div>
       </section>
     </main>
-    <script>
-      let getAllLinks = document.querySelectorAll("#nakama_link_copy");
-      getAllLinks.forEach((createButtonCopy, index) => {
-        createButtonCopy.addEventListener("click", () => {
-          let assingStatusCopy = document.querySelectorAll(
-            "#nakama_link_status"
-          );
-          let createTmpElement = document.createElement("textarea");
-          createTmpElement.value = createButtonCopy.textContent.trim();
-          document.body.appendChild(createTmpElement);
-          createTmpElement.select();
-          if (document.execCommand("copy")) {
-            createTmpElement.remove();
-            assingStatusCopy[
-              index
-            ].innerHTML = `<p class="bg-primary p-2 rounded text-white">Copy Success Nakama</p>`;
-            setTimeout(() => {
-              assingStatusCopy[index].innerHTML = "";
-            }, 1800);
-          }
-        });
-      });
-    </script>
+    <script src="/assets/js/app.js"></script>
   </body>
 </html>

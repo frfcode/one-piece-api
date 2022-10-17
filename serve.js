@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-const port = 60;
+const port = process.env.PORT || 60;
 import { routeNakamas } from "./route/nakamas.js";
 import { routeFront } from "./route/front.js";
 import { routeTripulation } from "./route/tripulation.js";
@@ -20,6 +20,6 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.use("/", routeFront);
 
 //INIT SERVER
-app.listen(port, "localhost", () => {
+app.listen(port, () => {
   console.log("SERVER RUNNING IN PORT " + port);
 });
