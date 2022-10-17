@@ -1,19 +1,15 @@
 import express from "express";
 const routeTripulation = express.Router();
+import {
+  tripulationName,
+  tripulationNameByNakama,
+} from "../controller/tripulationController.js";
 
-routeTripulation.get("/api/v1/tripulation=:nameTripulation", (req, res) => {
-  let { nameTripulation } = req.params;
-  res.send("search tripulation " + name);
-});
+routeTripulation.get("/tripulation/name=:tripulation", tripulationName);
 
 routeTripulation.get(
-  "/api/v1/tripulation=:nameTripulation&nakame=:nakamaName",
-  (req, res) => {
-    let { nameTripulation, nakamaName } = req.params;
-    res.send(
-      "search tripulation " + nameTripulation + " with the nakama " + nakamaName
-    );
-  }
+  "/tripulation/name=:nameTripulation&nakamaName=:nameKama",
+  tripulationNameByNakama
 );
 
 export { routeTripulation };

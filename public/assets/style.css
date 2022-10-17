@@ -1,9 +1,44 @@
+body {
+  background: #fff;
+}
+
+body::-webkit-scrollbar,
+pre::-webkit-scrollbar {
+  width: 5px;
+  background: #ffffff;
+  height: 5px;
+}
+body::-webkit-scrollbar-thumb,
+pre::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
 a {
   text-decoration: none;
 }
-.one-piece-background_1 {
-  background: #ebd345;
+.nakamas-background_1 {
+  background: #f8de3c;
 }
-.one-piece-text-color_1 {
+.nakamas-text-color_1 {
   color: #e4e5e7;
+}
+
+.nakamas-codeblock {
+  background: #333;
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+  margin: 0;
+}
+.nakama-block-list {
+  overflow-y: scroll;
+  height: 200px;
+  background: #333;
+  color: #fff;
+}
+
+.nakama-block-list > * {
+  margin: 0;
+  padding: 4px 5px;
 }
