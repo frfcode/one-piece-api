@@ -11,13 +11,13 @@ Method: **/GET**
 **/api/v1/nakamas/name=NameNakama**
 
 ```
-https://nakamas-one-piece.herokuapp.com/api/v1/nakamas/name="nami"
+https://nakamas-one-piece.herokuapp.com/api/v1/nakamas/name=nami
 ```
 
 Ejemplo:
 
 ```
-https://nakamas-one-piece.herokuapp.com/api/v1/nakamas/name="monkey_d._luffy"
+https://nakamas-one-piece.herokuapp.com/api/v1/nakamas/name=monkey_d._luffy
 ```
 
 Get Tripulation Name **En construccion**
@@ -33,7 +33,7 @@ https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name=:tripulation
 Ejemplo
 
 ```
-https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name="piratas_de_sombrero_de_paja"
+https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name=piratas_de_sombrero_de_paja
 ```
 
 Get Tripulation Name By Nakama **En construccion**
@@ -47,5 +47,5 @@ https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name=:nameTripulation
 Ejemplo
 
 ```
-https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name="piratas_de_sombrero_de_paja"&nakamaName="nami"
+https://nakamas-one-piece.herokuapp.com/api/v1/tripulation/name=piratas_de_sombrero_de_paja&nakamaName=nami
 ```
