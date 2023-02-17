@@ -2,11 +2,11 @@ import express from "express";
 const routeFront = express.Router();
 
 routeFront.get("/", (__req, res: any) => {
-  res.send("hello world");
+  res.render("index.html", {title: 'Nakamas One Piece API'});
 });
 
 routeFront.get("*", (__req, res:any) => {
-  res.send("404");
+  res.render("404.html", {title: 'Nakamas One Piece API'});
 });
 
 export { routeFront };
