@@ -1,8 +1,7 @@
 import express from "express";
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 60;
 import { routeNakamas } from "./route/nakamas";
-import { routeFront } from "./route/front";
 import { routeTripulation } from "./route/tripulation";
 import path from "path";
 
@@ -23,7 +22,6 @@ app.engine('html', require('ejs').renderFile);
 
 //FRONTEND
 app.use(express.static(path.join(__dirname, "/public")));
-app.use("/", routeFront);
 
 //INIT SERVER
 app.listen(port, () => {
