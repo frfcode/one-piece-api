@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-const port = process.env.PORT || 60;
+const port = process.env.PORT;
 import { routeNakamas } from "./route/nakamas";
 import { routeFront } from "./route/front";
 import { routeTripulation } from "./route/tripulation";
