@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev serve.ts",
+    "build": "ts-node-dev serve.ts",
     "dev": "nodemon build/serve.js --watch",
     "tsc": "tsc",
     "tsc-dev": "ts-node-dev serve.ts"
