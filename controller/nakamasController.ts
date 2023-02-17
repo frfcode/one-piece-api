@@ -1,6 +1,6 @@
-import { getNakamaData } from "../services/nakamas.js";
+import { getNakamaData } from "../services/nakamas";
 
-const findNakama = (req, res) => {
+const findNakama = (req: any, res: any) => {
   let { nakamaName } = req.params;
   let getDataNakama = getNakamaData(nakamaName);
   getDataNakama

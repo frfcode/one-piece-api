@@ -1,11 +1,11 @@
 import express from "express";
 const routeFront = express.Router();
 
-routeFront.get("/", (req, res) => {
+routeFront.get("/", (__req, res: any) => {
   res.send("hello world");
 });
 
-routeFront.get("*", (req, res) => {
+routeFront.get("*", (__req, res:any) => {
   res.send("404");
 });
 

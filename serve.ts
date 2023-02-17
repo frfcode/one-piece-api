@@ -1,21 +1,27 @@
 import express from "express";
 const app = express();
 const port = process.env.PORT || 60;
-import { routeNakamas } from "./route/nakamas.js";
-import { routeFront } from "./route/front.js";
-import { routeTripulation } from "./route/tripulation.js";
+import { routeNakamas } from "./route/nakamas";
+import { routeFront } from "./route/front";
+import { routeTripulation } from "./route/tripulation";
 import path from "path";
-import { fileURLToPath } from "url";
 
 app.use(express.json());
 
 //BACKEND
 app.use("/api/v1", routeNakamas);
 app.use("/api/v1", routeTripulation);
+/*
+
+
+//VIEWS
+app.set('views', path.join(__dirname,'public'));
+app.set('view engine', 'ejs'); 
+app.engine('html', require('ejs').renderFile);
+
+*/
 
 //FRONTEND
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/", routeFront);
 

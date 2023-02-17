@@ -3,7 +3,7 @@ const routeTripulation = express.Router();
 import {
   tripulationName,
   tripulationNameByNakama,
-} from "../controller/tripulationController.js";
+} from "../controller/tripulationController";
 
 routeTripulation.get("/tripulation/name=:tripulation", tripulationName);
 

@@ -1,5 +1,6 @@
-const tripulationName = (req, res) => {
+const tripulationName = (req: any, res: any) => {
   let { nameTripulation, nakamaName } = req.params;
+  console.log(nameTripulation + ' ' + nakamaName)
   res.send(
     JSON.stringify({
       message:
@@ -8,8 +9,9 @@ const tripulationName = (req, res) => {
   );
 };
 
-const tripulationNameByNakama = (req, res) => {
+const tripulationNameByNakama = (req: any, res: any) => {
   let { nameTripulation } = req.params;
+  console.log(nameTripulation)
   res.send(
     JSON.stringify({
       message:
