@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev serve.ts",
-    "build": "ts-node-dev serve.ts",
+    "build": "ts-node --transpile-only serve.ts",
     "dev": "nodemon build/serve.js --watch",
     "tsc": "tsc",
     "tsc-dev": "ts-node-dev serve.ts"
@@ -18,7 +18,8 @@
     "cheerio": "^1.0.0-rc.12",
     "cross-fetch": "^3.1.5",
     "express": "^4.18.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
