@@ -1,15 +1,15 @@
 import express from "express";
 const app = express();
 const port = process.env.PORT || 60;
-//import { routeNakamas } from "./route/nakamas";
-//import { routeTripulation } from "./route/tripulation";
+import { routeNakamas } from "./route/nakamas";
+import { routeTripulation } from "./route/tripulation";
 import path from "path";
 
 app.use(express.json());
 
 //BACKEND
-//app.use("/api/v1", routeNakamas);
-//app.use("/api/v1", routeTripulation);
+app.use("/api/v1", routeNakamas);
+app.use("/api/v1", routeTripulation);
 /*
 
 
@@ -22,6 +22,7 @@ app.engine('html', require('ejs').renderFile);
 
 //FRONTEND
 app.use(express.static(path.join(__dirname, "/public")));
+
 
 //INIT SERVER
 app.listen(port, () => {

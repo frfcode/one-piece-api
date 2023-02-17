@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node --transpile-only serve.ts",
+    "start": "node build/serve.js",
     "dev": "nodemon build/serve.js --watch",
-    "tsc": "tsc",
+    "build": "tsc",
     "tsc-dev": "ts-node-dev serve.ts"
   },
   "author": "",
